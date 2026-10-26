@@ -25,30 +25,30 @@ Data RAM: $256 \times 8$-bit ($256$ bytes).
 Flags: Zero (`Z`) and Carry/Borrow (`C`).
 Target FPGA: Xilinx Virtex-7 (`xc7vx485tffg1157-1`) or generic Artix-7 series.
 ```
-       +---------------------------------------------------------------+
-       |                      risc8\_5stage\_core                        |
-       |                                                               |
-       |   +--------+      +--------------+      +--------------+      |
-  clk ---->|  imem  |----->| Pipeline Reg |----->|     alu      |      |
-  rst ---->|  (IF)  |      |   \& Control  |      |     (EX)     |      |
-       |   +--------+      +--------------+      +--------------+      |
-       |                          |                     |              |
-       |                   +--------------+      +--------------+      |
-       |                   |   regfile    |      |     dmem     |      |
-       |                   |  (ID / WB)   |      |    (MEM)     |      |
-       |                   +--------------+      +--------------+      |
-       |                          ^                     |              |
-       |                          +-- Forwarding Bus ---+              |
-       +---------------------------------------------------------------+
+       +---------------------------------------------------------------+
+       |                      risc8\_5stage\_core                        |
+       |                                                               |
+       |   +--------+      +--------------+      +--------------+      |
+  clk ---->|  imem  |----->| Pipeline Reg |----->|     alu      |      |
+  rst ---->|  (IF)  |      |   \& Control  |      |     (EX)     |      |
+       |   +--------+      +--------------+      +--------------+      |
+       |                          |                     |              |
+       |                   +--------------+      +--------------+      |
+       |                   |   regfile    |      |     dmem     |      |
+       |                   |  (ID / WB)   |      |    (MEM)     |      |
+       |                   +--------------+      +--------------+      |
+       |                          ^                     |              |
+       |                          +-- Forwarding Bus ---+              |
+       +---------------------------------------------------------------+
 ```
 ---
 📜 Instruction Set Architecture (ISA)
 The processor supports 16 instructions with a fixed 16-bit word length divided into 4 formats:
 ```
-R-type   | \[15:12 Opcode] | \[11:9 rd] | \[8:6 rs1] | \[5:3 rs2] | \[2:0 000]
-R1-type  | \[15:12 Opcode] | \[11:9 rd] | \[8:6 rs1] | \[5:0 000000]
-I-type   | \[15:12 Opcode] | \[11:9 rd] | \[8 0]     | \[7:0 imm8]
-J-type   | \[15:12 Opcode] | \[11:8 0000]           | \[7:0 addr8]
+R-type   | \[15:12 Opcode] | \[11:9 rd] | \[8:6 rs1] | \[5:3 rs2] | \[2:0 000]
+R1-type  | \[15:12 Opcode] | \[11:9 rd] | \[8:6 rs1] | \[5:0 000000]
+I-type   | \[15:12 Opcode] | \[11:9 rd] | \[8 0]     | \[7:0 imm8]
+J-type   | \[15:12 Opcode] | \[11:8 0000]           | \[7:0 addr8]
 ```
 Instruction Table
 Opcode	Mnemonic	Operation	Flags	Format	Description
@@ -84,17 +84,17 @@ Taken branches perform a 2-cycle pipeline flush, converting wrong-path instructi
 📁 Project Structure
 ```text
 ├── rtl/
-│   ├── alu.v                # Arithmetic Logic Unit \& Flag generation
-│   ├── control\_unit.v       # Combinational opcode decoder \& signal generator
-│   ├── dmem.v               # 256x8-bit Data RAM module
-│   ├── hazard\_unit.v        # Forwarding logic \& stall control unit
-│   ├── imem.v               # 256x16-bit Instruction ROM with preloaded program
-│   ├── regfile.v            # 8x8-bit Register File with internal bypass logic
-│   └── risc8\_5stage\_core.v  # Core Top-Level: Pipeline registers \& datapath wiring
+│   ├── alu.v                # Arithmetic Logic Unit \& Flag generation
+│   ├── control\_unit.v       # Combinational opcode decoder \& signal generator
+│   ├── dmem.v               # 256x8-bit Data RAM module
+│   ├── hazard\_unit.v        # Forwarding logic \& stall control unit
+│   ├── imem.v               # 256x16-bit Instruction ROM with preloaded program
+│   ├── regfile.v            # 8x8-bit Register File with internal bypass logic
+│   └── risc8\_5stage\_core.v  # Core Top-Level: Pipeline registers \& datapath wiring
 ├── sim/
-│   └── tb\_risc8\_5stage.v    # Self-checking testbench with trace \& performance logging
+│   └── tb\_risc8\_5stage.v    # Self-checking testbench with trace \& performance logging
 ├── constraints/
-│   └── risc8.xdc            # Vivado timing constraint file (100 MHz clock)
+│   └── risc8.xdc            # Vivado timing constraint file (100 MHz clock)
 └── README.md
 ```
 ---
@@ -110,19 +110,19 @@ Operands Forwarded: 12 instances
 Verification Status: `ALL TESTS PASSED` (0 Errors)
 ```text
 ============================================================
-                   EXECUTION RESULTS SUMMARY                 
+                   EXECUTION RESULTS SUMMARY                 
 ============================================================
- \[CHECK] Register R1 = 0x00                     --> PASS
- \[CHECK] Register R2 = 0x0F                     --> PASS
- \[CHECK] Register R3 = 0x01                     --> PASS
- \[CHECK] Register R4 = 0x20                     --> PASS
- \[CHECK] Register R5 = 0x00                     --> PASS
- \[CHECK] Register R6 = 0x66                     --> PASS
- \[CHECK] Register R7 = 0x00                     --> PASS
- \[CHECK] RAM\[0x20]   = 0x0F                     --> PASS
- \[CHECK] Flags \[Z,C] = 2'b11                    --> PASS
+ \[CHECK] Register R1 = 0x00                     --> PASS
+ \[CHECK] Register R2 = 0x0F                     --> PASS
+ \[CHECK] Register R3 = 0x01                     --> PASS
+ \[CHECK] Register R4 = 0x20                     --> PASS
+ \[CHECK] Register R5 = 0x00                     --> PASS
+ \[CHECK] Register R6 = 0x66                     --> PASS
+ \[CHECK] Register R7 = 0x00                     --> PASS
+ \[CHECK] RAM\[0x20]   = 0x0F                     --> PASS
+ \[CHECK] Flags \[Z,C] = 2'b11                    --> PASS
 ------------------------------------------------------------
- \* ALL TESTS PASSED WITH ZERO ERRORS \*
+ \* ALL TESTS PASSED WITH ZERO ERRORS \*
 ============================================================
 ```
 ---
