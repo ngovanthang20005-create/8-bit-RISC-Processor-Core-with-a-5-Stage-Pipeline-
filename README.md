@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 An 8-bit RISC processor core featuring a classic 5-stage pipeline (IF, ID, EX, MEM, WB), written in synthesizable Verilog-2001. The design includes dynamic hazard handling (data forwarding, load-use stalls, branch flushes) and a Harvard memory architecture. Verified using Xilinx Vivado 2026.1 with a self-checking testbench.
 ---
-📌 Features
+-Features
 Architecture: Harvard memory setup (256 × 16-bit ROM for Instructions, 256 × 8-bit RAM for Data).
 Pipeline Stages: 5-Stage classic pipeline (`IF` -> `ID` -> `EX` -> `MEM` -> `WB`).
 Register File: 8 general-purpose 8-bit registers (`R0`–`R7`) with dual read ports and internal write-bypass.
@@ -17,7 +17,7 @@ Control Hazards: 2-cycle branch flush on taken branches/jumps.
 Flags: Zero ($Z$) and Carry ($C$) flags updated by arithmetic, logic, and shift operations.
 Synthesis Quality: Clean, latch-free code; targets Xilinx Virtex-7 / Artix-7 FPGAs.
 ---
-🏗️ Block Diagram & Datapath
+- Block Diagram & Datapath
 The core consists of 6 modular components tied together by a central 5-stage pipeline top level:
 ```
                   +-------------------------------------------------------+
@@ -44,7 +44,7 @@ The core consists of 6 modular components tied together by a central 5-stage pip
                   +-------------------------------------------------------+
 ```
 ---
-📑 Instruction Set Architecture (ISA)
+- Instruction Set Architecture (ISA)
 All instructions are fixed 16 bits in width:
 Format	Bit 15..12	Bit 11..9	Bit 8..6	Bit 5..3	Bit 2..0	Instructions
 R-type	`opcode`	`rd`	`rs1`	`rs2`	`000`	`ADD`, `SUB`, `AND`, `OR`, `XOR`
@@ -70,7 +70,7 @@ Opcode (Hex)	Mnemonic	Format	Operation	Flags
 `0xE`	`BNZ addr8`	J	if $Z == 0$, $PC \leftarrow addr8$	-
 `0xF`	`HLT`	-	Stop execution	-
 ---
-📁 Repository Structure
+- Repository Structure
 ```
 ├── rtl/
 │   ├── alu.v                 # 8-bit ALU (Arithmetic, Logic, Shifts, Flags)
@@ -90,7 +90,7 @@ Opcode (Hex)	Mnemonic	Format	Operation	Flags
 └── README.md                 # Project Overview
 ```
 ---
-⚡ Verification & Results
+- Verification & Results
 A test program consisting of 34 instructions (covering arithmetic loops, memory transfers, load-use dependencies, conditional branching, and flushing) was executed on the self-checking testbench.
 Simulation Output Metrics
 ```text
@@ -113,7 +113,7 @@ Synthesis: Completely clean; 0 Warnings, 0 Unintended Latches.
 Post-Implementation Cells: 36 logic cells / flip-flops (Control path retained under optimizations).
 Timing Constraint: Met target clock frequency of 100 MHz ($T_{clk} = 10\text{ ns}$).
 ---
-🚀 How to Run (Xilinx Vivado)
+- How to Run (Xilinx Vivado)
 Clone Repository:
 ```bash
    git clone https://github.com/your-username/risc8-5stage-pipeline.git
@@ -133,10 +133,10 @@ Run Synthesis & Implementation:
 Click Run Synthesis and check for zero latch warnings.
 Click Run Implementation and view Report Timing Summary (ensure $WNS \ge 0$).
 ---
-👤 Author
+- Author
 Name: Ngô Văn Thắng
 Student ID: SS190566
 Tool Standard: Xilinx Vivado 2026.1 / Verilog-2001
 ---
-📜 License
+- License
 This project is released under the MIT License.
