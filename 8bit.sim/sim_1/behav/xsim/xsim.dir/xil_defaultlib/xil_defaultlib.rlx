@@ -1,0 +1,13 @@
+0.7
+2020.2
+Jun 16 2026
+11:10:11
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/alu.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/control_unit.v,,alu,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/control_unit.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/dmem.v,,control_unit,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/dmem.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/hazard_unit.v,,dmem,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/hazard_unit.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/imem.v,,hazard_unit,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/imem.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/regfile.v,,imem,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/regfile.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/risc8_5stage_core.v,,regfile,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/risc8_5stage_core.v,1792464609,verilog,,C:/Users/ngova/Downloads/8but/risc8_5stage/tb/tb_risc8_5stage.v,,risc8_5stage_core,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/8but/risc8_5stage/tb/tb_risc8_5stage.v,1792719147,verilog,,,,tb_risc8_5stage,,,D:/2026.1/Vivado/data/rsb/busdef,,,,,
+C:/Users/ngova/Downloads/New folder/8bit/8bit.sim/sim_1/behav/xsim/glbl.v,1773749341,verilog,,,,glbl,,,,,,,,

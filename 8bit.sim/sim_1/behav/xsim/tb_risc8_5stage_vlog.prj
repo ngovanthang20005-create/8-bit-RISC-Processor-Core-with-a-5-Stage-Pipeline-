@@ -1,0 +1,16 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "D:/2026.1/Vivado/data/rsb/busdef" \
+"../../../../../../8but/risc8_5stage/rtl/alu.v" \
+"../../../../../../8but/risc8_5stage/rtl/control_unit.v" \
+"../../../../../../8but/risc8_5stage/rtl/dmem.v" \
+"../../../../../../8but/risc8_5stage/rtl/hazard_unit.v" \
+"../../../../../../8but/risc8_5stage/rtl/imem.v" \
+"../../../../../../8but/risc8_5stage/rtl/regfile.v" \
+"../../../../../../8but/risc8_5stage/rtl/risc8_5stage_core.v" \
+"../../../../../../8but/risc8_5stage/tb/tb_risc8_5stage.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
