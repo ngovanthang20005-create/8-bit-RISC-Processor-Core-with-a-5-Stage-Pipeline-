@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Oct 26 19:05:11 2026
+# Process ID         : 29360
+# Current directory  : C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1
+# Command line       : vivado.exe -log risc8_5stage_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc8_5stage_core.tcl
+# Log file           : C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1/risc8_5stage_core.vds
+# Journal file       : C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-A53R6Q5P
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16369 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 26569 MB
+# Available Virtual  : 13813 MB
+#-----------------------------------------------------------
+source risc8_5stage_core.tcl -notrace

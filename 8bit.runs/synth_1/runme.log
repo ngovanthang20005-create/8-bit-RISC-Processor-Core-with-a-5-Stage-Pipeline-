@@ -1,0 +1,247 @@
+
+*** Running vivado
+    with args -log risc8_5stage_core.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc8_5stage_core.tcl
+
+
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 23-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Mon Oct 26 19:05:11 2026
+# Process ID         : 29360
+# Current directory  : C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1
+# Command line       : vivado.exe -log risc8_5stage_core.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source risc8_5stage_core.tcl
+# Log file           : C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1/risc8_5stage_core.vds
+# Journal file       : C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1\vivado.jou
+# Running On         : LAPTOP-A53R6Q5P
+# Platform           : Windows 11
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 5 7535HS with Radeon Graphics        
+# CPU Frequency      : 3294 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 12
+# Host memory        : 16369 MB
+# Swap memory        : 10200 MB
+# Total Virtual      : 26569 MB
+# Available Virtual  : 13813 MB
+#-----------------------------------------------------------
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:02:23 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Mon Oct 26 19:05:11 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source risc8_5stage_core.tcl -notrace
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 617.707 ; gain = 270.066
+Command: synth_design -top risc8_5stage_core -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Vivado_Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Vivado_Synthesis' and/or device 'xc7vx485t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12464
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1194.547 ; gain = 570.891
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'risc8_5stage_core' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/risc8_5stage_core.v:51]
+INFO: [Synth 8-6157] synthesizing module 'imem' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/imem.v:23]
+	Parameter INIT_FILE bound to: program.hex - type: string 
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'program.hex'; please make sure the file is added to project and has read permission, ignoring [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/imem.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'imem' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/imem.v:23]
+INFO: [Synth 8-6157] synthesizing module 'control_unit' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/control_unit.v:35]
+INFO: [Synth 8-226] default block is never used [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/control_unit.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'control_unit' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/control_unit.v:35]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/regfile.v:28]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/regfile.v:28]
+INFO: [Synth 8-6157] synthesizing module 'hazard_unit' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/hazard_unit.v:43]
+INFO: [Synth 8-6155] done synthesizing module 'hazard_unit' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/hazard_unit.v:43]
+INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/alu.v:29]
+INFO: [Synth 8-226] default block is never used [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/alu.v:62]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/alu.v:29]
+INFO: [Synth 8-6157] synthesizing module 'dmem' [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/dmem.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'dmem' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/dmem.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'risc8_5stage_core' (0#1) [C:/Users/ngova/Downloads/8but/risc8_5stage/rtl/risc8_5stage_core.v:51]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1320.219 ; gain = 696.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1320.219 ; gain = 696.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1320.219 ; gain = 696.562
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1320.219 ; gain = 696.562
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    9 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                8 Bit    Registers := 16    
+	                3 Bit    Registers := 6     
+	                1 Bit    Registers := 25    
++---Muxes : 
+	 257 Input   16 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 5     
+	   3 Input    8 Bit        Muxes := 2     
+	  16 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 2     
+	  16 Input    1 Bit        Muxes := 12    
+	   2 Input    1 Bit        Muxes := 15    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-13374] Removed Unreachable instance i_2 containing BRAMs/URAMs in constant propagation
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1836.434 ; gain = 1212.777
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1836.434 ; gain = 1212.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1836.434 ; gain = 1212.777
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |BUFG |     1|
+|2     |LUT1 |     1|
+|3     |LUT2 |     2|
+|4     |LUT3 |     2|
+|5     |LUT4 |     1|
+|6     |LUT5 |     1|
+|7     |LUT6 |     2|
+|8     |FDRE |    12|
+|9     |IBUF |     2|
+|10    |OBUF |    12|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    36|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2097.691 ; gain = 1474.035
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 2098.676 ; gain = 1474.035
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2111.699 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2243.746 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 7946b46e
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+26 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:44 . Memory (MB): peak = 2244.789 ; gain = 1627.082
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2244.789 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/ngova/Downloads/New folder/8bit/8bit.runs/synth_1/risc8_5stage_core.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file risc8_5stage_core_utilization_synth.rpt -pb risc8_5stage_core_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 26 19:06:11 2026...
